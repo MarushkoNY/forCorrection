@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/Nikolay/Desktop/WS.wsdl" uri="src/conf/xml-resources/web-services/DataWS/wsdl/WS.wsdl"/>
+    <system systemId="http://localhost:7001/WebApp/DataWSImplService?xsd=1" uri="src/conf/xml-resources/web-services/DataWS/wsdl/localhost_7001/WebApp/DataWSImplService.xsd_1.xsd"/>
+</catalog>
