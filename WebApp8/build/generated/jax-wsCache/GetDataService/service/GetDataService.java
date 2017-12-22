@@ -1,7 +1,6 @@
 
 package service;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
@@ -17,7 +16,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "GetDataService", targetNamespace = "http://service/", wsdlLocation = "http://localhost:7001/WebApp/GetDataService?wsdl")
+@WebServiceClient(name = "GetDataService", targetNamespace = "http://service/", wsdlLocation = "file:wsdl/GetDataService.wsdl")
 public class GetDataService
     extends Service
 {
@@ -27,14 +26,11 @@ public class GetDataService
     private final static QName GETDATASERVICE_QNAME = new QName("http://service/", "GetDataService");
 
     static {
-        URL url = null;
+        GETDATASERVICE_WSDL_LOCATION = service.GetDataService.class.getResource("file:wsdl/GetDataService.wsdl");
         WebServiceException e = null;
-        try {
-            url = new URL("http://localhost:7001/WebApp/GetDataService?wsdl");
-        } catch (MalformedURLException ex) {
-            e = new WebServiceException(ex);
+        if (GETDATASERVICE_WSDL_LOCATION == null) {
+            e = new WebServiceException("Cannot find 'file:wsdl/GetDataService.wsdl' wsdl. Place the resource correctly in the classpath.");
         }
-        GETDATASERVICE_WSDL_LOCATION = url;
         GETDATASERVICE_EXCEPTION = e;
     }
 

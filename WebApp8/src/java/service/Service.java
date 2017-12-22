@@ -5,6 +5,8 @@
  */
 package service;
 
+import WSGen.Data;
+
 /**
  *
  * @author Nikolay

@@ -2,4 +2,9 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:7001/WebApp/GetDataService?wsdl" uri="src/conf/xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl"/>
     <system systemId="http://localhost:7001/WebApp/GetDataService?xsd=1" uri="src/conf/xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.xsd_1.xsd"/>
+    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/GetDataService.xsd_1.xsd" uri="src/conf/xml-resources/jaxb/GetDataServiceCfg/GetDataService.xsd_1.xsd"/>
+    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/GetDataSchema.xsd" uri="src/conf/xml-resources/jaxb/GeatData/GetDataSchema.xsd"/>
+    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.wsdl" uri="src/conf/xml-resources/web-service-references/GetDataService_1/wsdl/GetDataService.wsdl"/>
+    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.xsd_1.xsd" uri="src/conf/xml-resources/web-service-references/GetDataService_1/wsdl/GetDataService.xsd_1.xsd"/>
+    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/GetDataConfig.xsd" uri="src/conf/xml-resources/jaxb/WSConfig/GetDataConfig.xsd"/>
 </catalog>

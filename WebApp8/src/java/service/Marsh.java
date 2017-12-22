@@ -5,6 +5,7 @@
  */
 package service;
 
+import WSGen.Data;
 import java.io.File;
 import java.io.FileReader;
 import java.io.StringWriter;

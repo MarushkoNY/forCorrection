@@ -1,11 +1,9 @@
 
 package service;
 
-import java.sql.Timestamp;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -37,12 +35,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "ip",
     "time"
 })
-@XmlRootElement
 public class Data {
 
     protected String ip;
     @XmlSchemaType(name = "dateTime")
-    protected Timestamp time;
+    protected XMLGregorianCalendar time;
     @XmlAttribute(name = "id", required = true)
     protected int id;
 
@@ -78,7 +75,7 @@ public class Data {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public Timestamp getTime() {
+    public XMLGregorianCalendar getTime() {
         return time;
     }
 
@@ -90,7 +87,7 @@ public class Data {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setTime(Timestamp value) {
+    public void setTime(XMLGregorianCalendar value) {
         this.time = value;
     }
 

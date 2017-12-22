@@ -5,7 +5,7 @@
  */
 package service;
 
-import service.Data;
+import WSGen.Data;
 import java.util.ArrayList;
 import javax.inject.Qualifier;
 import util.ServiceDef;

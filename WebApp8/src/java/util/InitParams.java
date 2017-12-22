@@ -18,7 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import javax.xml.ws.BindingProvider;
-import service.GetDataService;
+import WSGen.GetDataService;
+import cfg2.GetDataConfig;
 
 /**
  *
@@ -28,7 +29,7 @@ public class InitParams {
     
     public void init() throws FileNotFoundException, IOException{
             
-        GetDataServiceConfig cfg = new JAXBcfg().unmarshall();
+        GetDataConfig cfg = new JAXBcfg().unmarshall();
         
         
         BindingProvider bp = (BindingProvider) new GetDataService().getGetDataPort();

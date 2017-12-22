@@ -5,7 +5,9 @@
  */
 package util;
 
+import cfg2.GetDataConfig;
 import java.io.File;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
@@ -23,46 +25,51 @@ public class JAXBcfg {
     
     static {
         try {
-            ctx = JAXBContext.newInstance(GetDataServiceConfig.class);
+            ctx = JAXBContext.newInstance(GetDataConfig.class);
         } catch (JAXBException ex) {
             ex.printStackTrace();
         }
     }
     
+    public void marshall(GetDataConfig cfg){
+        try {
+            Marshaller mrs = ctx.createMarshaller();
+            mrs.marshal(cfg, new File("classpath:user_projects\\domains\\mydomain\\config\\ApplicationConfig\\GetDataService11.xml"));
+        } catch (JAXBException ex) {
+            ex.printStackTrace();
+        }
+    }
     
-//   public void marsh(GetDataServiceConfig cfg){
-//        try {
-//            Marshaller marsh = ctx.createMarshaller();
-//            marsh.marshal(cfg, new File("C:\\Users\\Nikolay\\Documents\\NetBeansProjects\\WebApp8\\src\\java\\util\\GetDataService.xsd"));
-//            
-//        } catch (JAXBException ex) {
-//            Logger.getLogger(JAXBcfg.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//   }
-    
-    public GetDataServiceConfig unmarshall(){
-        GetDataServiceConfig cfg = null;
+     public GetDataConfig unmarshall(){
+        GetDataConfig cfg = null;
         
         try {
             Unmarshaller unm = ctx.createUnmarshaller();
-            cfg = (GetDataServiceConfig) unm.unmarshal(new File("C:\\Users\\Nikolay\\Documents\\NetBeansProjects\\WebApp8\\src\\java\\util\\GetDataService.xsd"));
+            cfg = (GetDataConfig) unm.unmarshal(new File("C:\\Users\\Nikolay\\Desktop\\wls12130\\user_projects\\domains\\mydomain\\config\\ApplicationConfig\\GetDataService.xml"));
         } catch (JAXBException ex) {
             ex.printStackTrace();
         }
         
         return cfg;
     }
-    
-//    public static void main(String[] args) {
-////        GetDataServiceConfig cfg = new GetDataServiceConfig();
-////        cfg.setConnectionTimeout(1000);
-////        cfg.setEndpointLocation("http://localhost:7001/GetDataService");
-////        cfg.setRecieveTimeout(1000);
-////        
-////        new JAXBcfg().marsh(cfg);
-//        GetDataServiceConfig cfg = new JAXBcfg().unmarshall();
-//        System.out.println(cfg.getConnectionTimeout());
-//        System.out.println(cfg.getEndpointLocation());
-        
-    
+     
+     
+     
+     public static void main(String[] args) {
+//       GetDataConfig cfg  = new JAXBcfg().unmarshall();
+//         System.out.println(cfg.getConnectionTimeout());
+//         System.out.println(cfg.getEndpointLocation());
+         
+//           Map<String, String> env = System.getenv();
+//           for (Map.Entry<String, String> s : env.entrySet()){
+//               System.out.println(s.getKey() + " = " + s.getValue());
+//           }
+         GetDataConfig cfg = new GetDataConfig();
+         cfg.setConnectionTimeout(1000);
+         cfg.setEndpointLocation("s22211111122ss");
+         cfg.setRecieveTimeout(1000);
+         
+         new JAXBcfg().marshall(cfg);
+    }
+//  
 }

@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><getDataServiceConfig><connectionTimeout>1000</connectionTimeout><endpointLocation>http://localhost:7001/GetDataService</endpointLocation><recieveTimeout>1000</recieveTimeout></getDataServiceConfig>
