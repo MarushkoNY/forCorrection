@@ -3,18 +3,41 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/handler/RestHandler.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/GetDataService.xsd_1.xsd</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/Service.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/generated-sources/jax-ws/service/DataWS.java</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/org/netbeans/rest/application/config/ApplicationConfig.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.wsdl</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/GetDataService.wsdl</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/DataServiceMock.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/generated-sources/jax-ws/service/GetDataResponse.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/service/GetDataService.xml</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/web/WEB-INF/wsdl/GetDataService.wsdl</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/generated-sources/jax-ws/service/Data.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/util/InitParams.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/util/Validator.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/conf/xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/util/ServiceDef.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/handler/RestHandler.java</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/index.jsp</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/Marsh.java</file>
-            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/util/Validator.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/GetDataService.wsdl</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/beans/BeanProducer.java</file>
-            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/DataServiceMock.java</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/DataService.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/generated-sources/jax-ws/service/package-info.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/web/WEB-INF/wsdl/GetDataService.xsd_1.xsd</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/GetDataService.xsd_1.xsd</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/web/WEB-INF/jax-ws-catalog.xml</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.wsdl</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/DataServiceCDI.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/generated-sources/jax-ws/service/ObjectFactory.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/jax-ws-catalog.xml</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/generated-sources/jax-ws/service/GetDataService.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/build/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.xsd_1.xsd</file>
             <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/beans.xml</file>
-            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/util/ServiceDef.java</file>
+            <file>file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.xsd_1.xsd</file>
         </group>
     </open-files>
 </project-private>

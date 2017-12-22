@@ -28,7 +28,7 @@
     </target>
     <target name="wsimport-client-GetDataService" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetDataService" destdir="${build.generated.dir}/jax-wsCache/GetDataService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:7001/WebApp/GetDataService?wsdl" xnocompile="true" xendorsed="true">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetDataService" destdir="${build.generated.dir}/jax-wsCache/GetDataService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:wsdl/GetDataService.wsdl" xnocompile="true" xendorsed="true">
             <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
         </wsimport>

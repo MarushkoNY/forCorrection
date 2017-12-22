@@ -32,6 +32,7 @@
 <port name="GetDataPort" binding="tns:GetDataPortBinding">
 <soap:address location="http://localhost:7001/WebApp/GetDataService"/>
 <http-conf:client ConnectionTimeout="10000" ReceiveTimeout = "10000"/>
+<soap:
 </port>
 </service>
 </definitions>

@@ -6,8 +6,11 @@
 package handler;
 
 import beans.BeanProducer;
+import java.io.IOException;
 import java.net.URI;
 import java.sql.Timestamp;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Any;
@@ -28,6 +31,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import service.Data;
 import service.Service;
+import util.InitParams;
 import util.ServiceDef;
 import util.Validator;
 
@@ -39,6 +43,8 @@ import util.Validator;
 @Stateless
 @Path("/")
 public class RestHandler {
+    
+    private static boolean isInitializated = false;
     
     @Inject @Any 
     private Instance<Service> services;
@@ -63,7 +69,7 @@ public class RestHandler {
     @GET
     @Path("/GetData")
     @Produces("text/html")
-    public  Response getData(@QueryParam("mode") String mode){
+    public  Response getData(@QueryParam("mode") String mode) throws IOException{
         int imode;
         if ((imode = Validator.validate(mode)) == 0){
             return Response.ok().entity("Enter the proper values!").build();
@@ -72,6 +78,11 @@ public class RestHandler {
         Data data = resolveService(imode).getData();
         String ip = data.getIp();
         Timestamp time = data.getTime();
+        
+        if (isInitializated == true){
+            new InitParams().init();
+        }
+        
         return Response.ok().entity(ip + " " + time).build();
     }
     

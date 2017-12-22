@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="file:/C:/Users/Nikolay/Desktop/WS.wsdl" uri="wsdl/WS.wsdl"/>
-    <system systemId="http://localhost:7001/WebApp/DataWSImplService?xsd=1" uri="wsdl/localhost_7001/WebApp/DataWSImplService.xsd_1.xsd"/>
-    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/GetDataService.wsdl" uri="wsdl/GetDataService.wsdl"/>
-    <system systemId="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/GetDataService.xsd_1.xsd" uri="wsdl/GetDataService.xsd_1.xsd"/>
-</catalog>

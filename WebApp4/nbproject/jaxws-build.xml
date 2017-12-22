@@ -18,6 +18,7 @@
     <target name="wsimport-init" depends="init">
         <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
         <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
         <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
         <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
             <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
@@ -25,6 +26,22 @@
         <condition property="conf-dir" value="${conf.dir}/" else="">
             <isset property="conf.dir"/>
         </condition>
+    </target>
+    <target name="wsimport-client-GetDataService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetDataService" destdir="${build.generated.dir}/jax-wsCache/GetDataService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/GetDataService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/src/java/service/GetDataService.wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/GetDataService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GetDataService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-GetDataService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
     </target>
     <target name="wsimport-service-DataWS" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/service/DataWS"/>
@@ -45,5 +62,6 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
         <delete dir="${build.generated.dir}/jax-wsCache/service/DataWS"/>
     </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GetDataService"/>
     <target name="wsimport-service-generate" depends="wsimport-service-DataWS"/>
 </project>

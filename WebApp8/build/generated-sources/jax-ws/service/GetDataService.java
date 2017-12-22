@@ -1,14 +1,18 @@
 
 package service;
 
+import com.sun.xml.internal.ws.client.BindingProviderProperties;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.namespace.QName;
+import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
 import javax.xml.ws.WebServiceClient;
 import javax.xml.ws.WebServiceException;
 import javax.xml.ws.WebServiceFeature;
+import javax.xml.ws.WebServiceRef;
+import javax.xml.ws.soap.SOAPBinding;
 
 
 /**
@@ -17,7 +21,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "GetDataService", targetNamespace = "http://service/", wsdlLocation = "WEB-INF/wsdl/GetDataService.wsdl")
+@WebServiceClient(name = "GetDataService", targetNamespace = "http://service/")
 public class GetDataService
     extends Service
 {
@@ -30,7 +34,7 @@ public class GetDataService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = null;
+            url = new URL("file:GetDataService.wsdl");
         } catch (Exception ex) {
             e = new WebServiceException(ex);
         }
@@ -61,7 +65,7 @@ public class GetDataService
     public GetDataService(URL wsdlLocation, QName serviceName, WebServiceFeature... features) {
         super(wsdlLocation, serviceName, features);
     }
-
+    
     /**
      * 
      * @return
@@ -71,6 +75,8 @@ public class GetDataService
     public DataWS getGetDataPort() {
         return super.getPort(new QName("http://service/", "GetDataPort"), DataWS.class);
     }
+    
+    
 
     /**
      * 
