@@ -11,33 +11,19 @@
     <target name="jaxb-code-generation" depends="xjc-typedef-target,-do-init,-init-macrodef-javac">
         <mkdir dir="${build.generated.sources.dir}/jaxb" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
         <mkdir dir="build/generated/jaxbCache" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
-        <mkdir dir="build/generated/jaxbCache/GetDataConfig"/>
-        <xjc package="cfg" destdir="build/generated/jaxbCache/GetDataConfig" catalog="catalog.xml">
+        <mkdir dir="build/generated/jaxbCache/GetDataConfigBinding"/>
+        <xjc package="getdataconfig" destdir="build/generated/jaxbCache/GetDataConfigBinding" catalog="catalog.xml">
             <classpath>
                 <pathelement location="${src.dir}"/>
                 <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
             </classpath>
             <arg value="-xmlschema"/>
-            <schema file="src/conf/xml-resources/jaxb/GetDataConfig/GetDataConfig.xsd"/>
-            <depends file="src/conf/xml-resources/jaxb/GetDataConfig/GetDataConfig.xsd"/>
-            <produces dir="build/generated/jaxbCache/GetDataConfig"/>
+            <schema file="src/conf/xml-resources/jaxb/GetDataConfigBinding/GetDataConfig.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/GetDataConfigBinding/GetDataConfig.xsd"/>
+            <produces dir="build/generated/jaxbCache/GetDataConfigBinding"/>
         </xjc>
         <copy todir="${build.generated.sources.dir}/jaxb">
-            <fileset dir="build/generated/jaxbCache/GetDataConfig"/>
-        </copy>
-        <mkdir dir="build/generated/jaxbCache/WSConfig"/>
-        <xjc package="cfg2" destdir="build/generated/jaxbCache/WSConfig" catalog="catalog.xml">
-            <classpath>
-                <pathelement location="${src.dir}"/>
-                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
-            </classpath>
-            <arg value="-xmlschema"/>
-            <schema file="src/conf/xml-resources/jaxb/WSConfig/GetDataConfig.xsd"/>
-            <depends file="src/conf/xml-resources/jaxb/WSConfig/GetDataConfig.xsd"/>
-            <produces dir="build/generated/jaxbCache/WSConfig"/>
-        </xjc>
-        <copy todir="${build.generated.sources.dir}/jaxb">
-            <fileset dir="build/generated/jaxbCache/WSConfig"/>
+            <fileset dir="build/generated/jaxbCache/GetDataConfigBinding"/>
         </copy>
         <!--*** Web project javac macro does not support sourcepath attribute, so do not pass "sourcepath=${src.dir}"-->
     </target>

@@ -5,7 +5,7 @@
  */
 package util;
 
-import cfg2.GetDataConfig;
+import getdataconfig.GetDataConfig;
 import java.io.File;
 import java.util.Map;
 import java.util.logging.Level;
@@ -30,15 +30,15 @@ public class JAXBcfg {
             ex.printStackTrace();
         }
     }
-    
-    public void marshall(GetDataConfig cfg){
-        try {
-            Marshaller mrs = ctx.createMarshaller();
-            mrs.marshal(cfg, new File("classpath:user_projects\\domains\\mydomain\\config\\ApplicationConfig\\GetDataService11.xml"));
-        } catch (JAXBException ex) {
-            ex.printStackTrace();
-        }
-    }
+//    
+//    public void marshall(GetDataConfig cfg){
+//        try {
+//            Marshaller mrs = ctx.createMarshaller();
+//            mrs.marshal(cfg, new File("C:\\Users\\Nikolay\\Documents\\NetBeansProjects\\WebApp8\\src\\java\\service\\DataService.java"));
+//        } catch (JAXBException ex) {
+//            ex.printStackTrace();
+//        }
+//    }
     
      public GetDataConfig unmarshall(){
         GetDataConfig cfg = null;
@@ -52,10 +52,20 @@ public class JAXBcfg {
         
         return cfg;
     }
+
      
      
      
-     public static void main(String[] args) {
+//     public static void main(String[] args) {
+//         Map<String, String> env  = System.getenv();
+//         
+//         for(Map.Entry<String, String> s : env.entrySet()){
+//             System.out.println(s.getKey() + " == " + s.getValue());
+//         }
+//         
+         
+         
+         
 //       GetDataConfig cfg  = new JAXBcfg().unmarshall();
 //         System.out.println(cfg.getConnectionTimeout());
 //         System.out.println(cfg.getEndpointLocation());
@@ -64,12 +74,12 @@ public class JAXBcfg {
 //           for (Map.Entry<String, String> s : env.entrySet()){
 //               System.out.println(s.getKey() + " = " + s.getValue());
 //           }
-         GetDataConfig cfg = new GetDataConfig();
-         cfg.setConnectionTimeout(1000);
-         cfg.setEndpointLocation("s22211111122ss");
-         cfg.setRecieveTimeout(1000);
-         
-         new JAXBcfg().marshall(cfg);
-    }
+//         GetDataConfig cfg = new GetDataConfig();
+//         cfg.setConnectionTimeout(1000);
+//         cfg.setEndpointLocation("s22211111122ss");
+//         cfg.setRecieveTimeout(1000);
+//         
+//         new JAXBcfg().marshall(cfg);
+//    }
 //  
 }

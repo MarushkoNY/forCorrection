@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-GetDataService" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetDataService" destdir="${build.generated.dir}/jax-wsCache/GetDataService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:wsdl/GetDataService.wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/localhost_7001/WebApp/GetDataService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetDataService" destdir="${build.generated.dir}/jax-wsCache/GetDataService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/GetDataService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/GetDataService.wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService/wsdl/GetDataService.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -42,21 +42,5 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
         <delete dir="${build.generated.dir}/jax-wsCache/GetDataService"/>
     </target>
-    <target name="wsimport-client-GetDataService_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/GetDataService_1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GetDataService_1" destdir="${build.generated.dir}/jax-wsCache/GetDataService_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService_1/wsdl/GetDataService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:/C:/Users/Nikolay/Documents/NetBeansProjects/WebApp8/web/WEB-INF/wsdl/localhost_7001/WebApp/GetDataService.wsdl" xnocompile="true" xendorsed="true" package="WSGen">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GetDataService_1/wsdl/GetDataService.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/GetDataService_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/GetDataService_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-GetDataService_1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/WSGen"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/GetDataService_1"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-GetDataService, wsimport-client-GetDataService_1"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-GetDataService"/>
 </project>

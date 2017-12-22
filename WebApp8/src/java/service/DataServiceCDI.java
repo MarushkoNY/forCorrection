@@ -5,7 +5,7 @@
  */
 package service;
 
-import WSGen.Data;
+import service.Data;
 import beans.BeanProducer;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;

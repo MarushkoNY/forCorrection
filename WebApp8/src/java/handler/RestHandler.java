@@ -29,7 +29,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
-import WSGen.Data;
+import service.Data;
 import service.Service;
 import util.InitParams;
 import util.ServiceDef;

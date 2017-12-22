@@ -14,7 +14,7 @@ import javax.jms.Queue;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 import javax.naming.InitialContext;
-import WSGen.Data;
+import service.Data;
 import service.Marsh;
 
 /**

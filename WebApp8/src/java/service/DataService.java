@@ -5,9 +5,9 @@
  */
 package service;
 
-import WSGen.Data;
-import WSGen.DataWS;
-import WSGen.GetDataService;
+import service.Data;
+import service.DataWS;
+import service.GetDataService;
 import beans.BeanProducer;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;

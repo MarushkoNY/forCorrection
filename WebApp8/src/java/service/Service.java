@@ -5,7 +5,7 @@
  */
 package service;
 
-import WSGen.Data;
+import service.Data;
 
 /**
  *

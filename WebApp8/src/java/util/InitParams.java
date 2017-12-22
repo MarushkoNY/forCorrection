@@ -18,8 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import javax.xml.ws.BindingProvider;
-import WSGen.GetDataService;
-import cfg2.GetDataConfig;
+import service.GetDataService;
+import getdataconfig.GetDataConfig;
 
 /**
  *
