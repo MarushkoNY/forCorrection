@@ -1,5 +1,6 @@
-connectionTimeout 10000 
-recieveTimeout 10000 
-endpointLocation "http://localhost:7001/WebApp/GetDataService?WSDL" 
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<getDataServiceConfig>
+   <connectionTimeout>1000</connectionTimeout>
+   <recieveTimeout>1000</recieveTimeout>
+   <endpointLocation>http://localhost:7001/GetDataService</endpointLocation>
+</getDataServiceConfig>

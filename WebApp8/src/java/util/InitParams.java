@@ -27,25 +27,15 @@ import service.GetDataService;
 public class InitParams {
     
     public void init() throws FileNotFoundException, IOException{
-
-        URL url = getClass().getResource("GetDataService.xml");
-        FileReader fr = new FileReader(url.getPath());
-        Scanner scan = new Scanner(fr);
-        String parameters = "";
-        int c;
-        while (scan.hasNextLine()){
-            parameters += scan.nextLine();
-        }
-        Map<String, String> values = new HashMap<>();
-        String[] mas = parameters.split(" ");
-        for (int i = 0; i <= mas.length-1; i+=2){
-            values.put(mas[i], mas[i+1]);
-        }
+            
+        GetDataServiceConfig cfg = new JAXBcfg().unmarshall();
+        
+        
         BindingProvider bp = (BindingProvider) new GetDataService().getGetDataPort();
         Map<String,Object> ctx = bp.getRequestContext();
-        ctx.put(CONNECT_TIMEOUT,  Integer.parseInt(values.get("connectionTimeout")));
-        ctx.put(REQUEST_TIMEOUT, Integer.parseInt(values.get("recieveTimeout")));
-        ctx.put(WSENDPOINT, values.get("enpointLocation"));
+        ctx.put(CONNECT_TIMEOUT,  cfg.getConnectionTimeout());
+        ctx.put(REQUEST_TIMEOUT, cfg.getRecieveTimeout());
+        ctx.put(WSENDPOINT, cfg.getEndpointLocation());
         
         
     }
